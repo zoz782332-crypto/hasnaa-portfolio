@@ -1,0 +1,101 @@
+/* ===== المتغيرات ===== */
+:root {
+  --bg: #f8f6fc;
+  --bg-alt: #efeaf8;
+  --ink: #1e1a3c;
+  --muted: #5d5878;
+  --accent: #d63f78;
+  --accent-dark: #b52f61;
+  --teal: #1f9a94;
+  --line: #ddd5ee;
+  --radius: 14px;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.9;
+}
+
+a:focus-visible, button:focus-visible, .form-control:focus {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* ===== التنقل ===== */
+.site-nav { background: rgba(248, 246, 252, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.navbar-brand { font-weight: 700; color: var(--ink); }
+.site-nav .nav-link { color: var(--muted); font-weight: 600; }
+.site-nav .nav-link:hover, .site-nav .nav-link.active { color: var(--accent); }
+
+/* ===== الواجهة الرئيسية ===== */
+.hero { padding: 9rem 0 5rem; }
+.hero-hello { color: var(--teal); font-weight: 600; margin-bottom: 0; }
+.hero-name { font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 700; line-height: 1.2; margin: .2rem 0 1rem; }
+.hero-role { font-size: 1.2rem; color: var(--muted); max-width: 34rem; }
+
+.btn-accent { background: var(--accent); color: #fff; border: 2px solid var(--accent); font-weight: 600; border-radius: 50px; padding: .5rem 1.8rem; }
+.btn-accent:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+.btn-outline-ink { border: 2px solid var(--ink); color: var(--ink); font-weight: 600; border-radius: 50px; padding: .5rem 1.8rem; }
+.btn-outline-ink:hover { background: var(--ink); color: #fff; }
+
+.code-card { background: var(--ink); color: #e8e4f5; border-radius: var(--radius); padding: 1.5rem; box-shadow: 12px 12px 0 var(--accent); }
+.code-card pre { margin: 0; font-size: .95rem; line-height: 1.8; }
+.c-k { color: #ff8fb7; } .c-p { color: #7fe0da; } .c-s { color: #ffd98a; }
+
+/* ===== الأقسام ===== */
+.section { padding: 5rem 0; }
+.section-alt { background: var(--bg-alt); }
+.section-title { font-size: 2rem; font-weight: 700; margin-bottom: 2.5rem; padding-bottom: .6rem; border-bottom: 4px solid var(--accent); display: inline-block; }
+.sub-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem; }
+.lead-text { font-size: 1.25rem; font-weight: 600; }
+
+.info-list li { padding: .7rem 0; border-bottom: 1px solid var(--line); }
+.info-list span { display: inline-block; min-width: 5.5rem; color: var(--teal); font-weight: 700; }
+
+/* ===== المهارات ===== */
+.skill { margin-bottom: 1.2rem; font-weight: 600; }
+.progress { height: .6rem; background: var(--line); border-radius: 50px; }
+.progress-bar { background: var(--teal); border-radius: 50px; }
+.chip { background: #fff; border: 1px solid var(--line); border-radius: 50px; padding: .3rem 1rem; font-weight: 600; }
+
+/* ===== المشاريع ===== */
+.project { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.project-thumb { height: 160px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; font-weight: 700; }
+.thumb-1 { background: var(--accent); }
+.thumb-2 { background: var(--teal); }
+.thumb-3 { background: var(--ink); }
+.project-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.project-body h3 { font-size: 1.25rem; font-weight: 700; }
+.project-body p { color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+.tags span { background: var(--bg-alt); border-radius: 6px; padding: 0 .6rem; font-size: .85rem; font-weight: 600; }
+.project-link { margin-top: auto; color: var(--accent-dark); font-weight: 700; text-decoration: none; }
+.project-link:hover { text-decoration: underline; }
+
+/* ===== الخط الزمني ===== */
+.timeline { border-inline-start: 3px solid var(--accent); padding-inline-start: 1.5rem; margin: 0; }
+.timeline li { position: relative; margin-bottom: 1.8rem; }
+.timeline li::before { content: ""; position: absolute; inset-inline-start: -2.05rem; top: .7rem; width: 14px; height: 14px; border-radius: 50%; background: var(--bg-alt); border: 3px solid var(--accent); }
+.timeline .when { display: block; color: var(--teal); font-weight: 700; }
+.timeline p { margin: 0; color: var(--muted); }
+
+/* ===== النموذج ===== */
+.contact-form { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; }
+.form-label { font-weight: 600; }
+.form-control { border-color: var(--line); border-radius: 10px; padding: .6rem 1rem; }
+
+/* ===== التذييل ===== */
+.site-footer { background: var(--ink); color: #cfc9e6; padding: 1.5rem 0; }
+.site-footer a { color: #fff; }
+
+@media (max-width: 575.98px) {
+  .hero { padding-top: 7rem; }
+  .section { padding: 3.5rem 0; }
+  .code-card { box-shadow: 8px 8px 0 var(--accent); }
+}
